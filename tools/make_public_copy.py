@@ -13,7 +13,7 @@ script stops with the file and line, so nothing personal can leave by accident.
 import json, os, re, shutil, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KEEP_TOP = ['CLAUDE.md', 'README.md', '.claude', 'tools']
+KEEP_TOP = ['CLAUDE.md', 'README.md', 'GUIDE.md', '.claude', 'tools']
 PUBLIC_GITIGNORE = '''# Your own details and notes stay on your computer and are never uploaded.
 profile/*
 !profile/README.md

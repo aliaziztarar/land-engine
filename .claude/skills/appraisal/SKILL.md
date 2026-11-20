@@ -47,7 +47,7 @@ The policy percentage, threshold and tenure split, valued at what a registered p
 - If the calculator is not in the profile, use the copy supplied with the engine, `templates/buildup-costing-calculator.xlsx` (BuildUp's Costing Calculator 4, copied November 2026): copy it to `profile/buildup/` and record it in `profile/profile.json` as `buildup_calculator`. Ask the member only if BuildUp has issued a newer version.
 - The calculator rate is the houses only; utilities, externals, contingency and fees are separate lines.
 
-## F. The best mix (the advisor's job)
+## F. The best mix (the lead's job)
 Within the council's rules (affordable percentage and tenure, mix policy, space standards, density) and the site's net developable area, test several schemes and choose the one that gives the highest consented land value while still reading as a scheme the council has approved nearby (the precedent profile):
 - vary the number of homes across the site review's range;
 - vary the open market types (semis, detached, bungalows) and sizes where local comparables support the price;

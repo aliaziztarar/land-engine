@@ -64,11 +64,11 @@ The letter scripts need Python with a few libraries, and LibreOffice (free) to t
 
 ## 8. Show them what it can do (the "what can you do" answer too)
 Explain in plain words, one short paragraph each, then offer to start:
-1. **Site review**: "Give me a title number and paste what SearchLand shows down the left side, or send its report. I'll read the council's assessment of the land, its planning history and two nearby examples (one approved, one refused), the council's other documents, whether it's for sale, who owns it and whether anyone has an option on it, and every constraint I can check. Then I'll tell you plainly whether it's worth pursuing and why, and what I couldn't check."
+1. **Site review**: "Give me the title number, the address SearchLand shows, and paste what SearchLand shows down the left side, or send its report. I'll read the council's assessment of the land, its planning history and two nearby examples (one approved, one refused), the council's other documents, and check whether it's listed for sale and every constraint I can check from my side. If SearchLand shows a company owner, I'll check the company. A private owner's name and any option on the land are only on the title register, so once you buy it (about £7), I'll read it. Then I'll tell you plainly whether it's worth pursuing and why, and what I couldn't check."
 2. **Appraisal**: "Say appraisal and I'll work out what the land could be worth with planning: local sold prices, the council's affordable housing rules, building costs from your calculator, the council's charges, and the best mix of homes. Then I'll prepare your BuildUp submission."
 3. **Letters and calls**: "Say letter and I'll write to the owners on your letterhead with a map of their land, ready to print. When they ring, I'll give you a script to read from."
 4. **Memory**: "I keep notes on every site, council and agent in this folder, so next time I start where we stopped and get faster with each council."
-Then: "Shall we start with your first site? Just give me the title number."
+Then explain how to start each session, in plain words: "Before each new chat, choose Sonnet 5.5 and High in the model menu under the message box, then type /advisor opus and check it says the advisor is set to Opus. Use one chat per site: start a new chat for each new site. I keep notes in this folder, so each new chat already knows everything we've done." Then: "Shall we start with your first site? Give me the title number, the address SearchLand shows and the SearchLand panel."
 
 ## 9. Record
 Run `python tools/build_index.py`. Tell the user setup is done in one line.

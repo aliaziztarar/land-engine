@@ -1,4 +1,4 @@
-# Appraisal: <TITLE> <site name>   (prepared <date>, by <advisor model>, inputs by worker)
+# Appraisal: <TITLE> <site name>   (prepared <date>, by <lead model>, inputs by worker)
 
 Scheme appraised: <n> homes: <breakdown by type and size in m2>. Net developable area <ha>. Density <dph>.
 Source of scheme: <SHELAA modelled capacity / layout / pre-app>.

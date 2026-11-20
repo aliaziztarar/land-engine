@@ -21,7 +21,7 @@ The user may say only one or two words. Act on them without asking which steps t
 | The user says or gives | What runs |
 |---|---|
 | "set me up", "start", first use | `setup` |
-| a title number, a SearchLand link, pasted SearchLand panel text, a SearchLand report, a SHELAA or call for sites ref, an address or postcode, "look at", "analyse", "review", "is this any good" | `site-review`, the whole method |
+| a title number with the address and the SearchLand panel pasted in, a SearchLand link, a SearchLand report, a SHELAA or call for sites ref, an address or postcode, "look at", "analyse", "review", "is this any good" | `site-review`, the whole method |
 | "screen <council>", "find me sites in <area>" | `site-review`, batch screening |
 | "appraisal", "numbers", "what's it worth", "what can we offer", "BuildUp", "Nexus" | `appraisal` |
 | "letter", "write to", "email the agent", "call script", "what do I say", "they rang", "reply" | `letters` |
@@ -33,15 +33,20 @@ The user may say only one or two words. Act on them without asking which steps t
 
 Every skill ends by offering the next logical step in one line ("Would you like me to write to the owners now?"), so the user is always carried forward.
 
-## How a session works: advisor and worker
+## How a session works: lead, Opus advisor and worker
 
-The model running the conversation is the advisor. This project starts every conversation on Opus (`.claude/settings.json`). The advisor decides what a site needs, reads the evidence that matters, makes every judgement, and writes everything the user or an owner will read.
+Three roles keep the quality high and the usage low:
+- **The lead** is the model running the conversation. The user sets it to Sonnet 5.5 at high effort. It plans the work, reads the evidence that matters, and writes everything the user or an owner will read.
+- **The Opus advisor** is Anthropic's advisor tool, switched on by the user with `/advisor opus` (this folder's settings also ask for it). The lead consults it at the moments where judgement decides the outcome, and always: before settling what a site needs and which route it is on; before giving the verdict; before finalising the appraisal figures and the price basis; before writing anything for the programme (Nexus answers, Site Checks); and before any letter or email to an owner, agent or promoter. Follow its guidance unless the evidence in front of you contradicts it; then say so to the user.
+- **The worker** (`.claude/agents/worker.md`, Sonnet) does the laborious, mechanical steps: converting documents to text and extracting entries, listing and reading planning applications and officer reports, searching listings and news, register and Companies House lookups, collecting comparables, S106 and CIL figures. Hand work to it with a precise written brief: the council, the title, the site reference, the documents by name and web address where known, the exact facts wanted, the file to write them to, and what to do if a step fails. Run independent briefs at the same time. Its output is data, not a verdict: check every figure that matters against its source. Do not read whole long documents in the lead when the worker can extract the part needed; that keeps the conversation short.
 
-Laborious, mechanical steps go to the worker, defined in `.claude/agents/worker.md`, which always runs on Sonnet: converting documents to text and extracting entries, listing and reading planning applications and officer reports, searching listings and news, register and Companies House lookups, collecting comparables, S106 and CIL figures. Hand work to the worker with a precise written brief: the council, the title, the site reference, the documents by name and web address where known, the exact facts wanted, the file to write them to, and what to do if a step fails. Run independent briefs at the same time. Worker output is data, not a verdict: check every figure that matters against its source before using it.
+**Check the setup at the start of every conversation.** If the chat is not running on Sonnet, or no advisor tool is available, tell the user once, in one line, before starting work: "To save your allowance this works best on Sonnet 5.5 at high effort with Opus as the advisor: choose Sonnet 5.5 and High in the model menu under the message box, then type /advisor opus and check it replies that the advisor is set to Opus." Then carry on with whatever they choose.
 
-This split keeps the expensive model for judgement and the cheaper model for bulk reading, which is what keeps usage down.
+## One site per chat
 
-The model picked in the Claude app's model menu overrides the folder's setting. At the start of a conversation, if you are not running on Opus, tell the user once, in one line, before starting work: "This chat is on <model>. For site work I'm set up to run on Opus; to switch, click the model name under the message box and choose Opus. <If Fable: Fable works too but is likely to use more of your allowance.> <If Sonnet or Haiku: the verdicts will be weaker.>" Then carry on with whatever they choose. The worker runs on Sonnet regardless. Do not read whole long documents in the advisor when the worker can extract the part needed.
+Every chat starts from the notes in this folder (the site note, the council note, the index), so a new chat already knows everything learned before. A long chat with several sites in it costs far more for every message and gets slower. So:
+- Work on one site per chat. When the user brings a second site into a chat where a site has already been worked on, first make sure the first site's note, the council note and the contacts log are up to date, then say: "Please start a new chat for this site, so this one doesn't get overloaded. Everything we've done is saved in the notes. In the new chat, paste the title number, the address SearchLand shows and the SearchLand panel, and I'll carry on from there."
+- To come back to a site later, the user starts a new chat and gives its title number; read its note and carry on from the open items.
 
 ## Never give up quietly
 
@@ -85,8 +90,8 @@ Do not read `sources/` wholesale; search it for the site reference or term and q
 ```
 CLAUDE.md                     this file
 README.md                     short introduction
-.claude/settings.json         starts every conversation on Opus (the advisor)
-.claude/agents/worker.md      the worker, always on Sonnet
+.claude/settings.json         asks for Sonnet as the lead and Opus as the advisor
+.claude/agents/worker.md      the worker, on Sonnet
 .claude/skills/setup/         first run: profile, letterhead, checks the computer has what the scripts need
 .claude/skills/site-review/   the full research method, coverage checklist, report shape, glossary
 .claude/skills/appraisal/     residual appraisal: comparables, S106, CIL, neutrality, best mix, programme submission

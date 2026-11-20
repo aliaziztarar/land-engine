@@ -5,7 +5,7 @@ description: Research a land site from every angle and give a verdict. Use whene
 
 # Site review
 
-The user gives one line: a title number and the SearchLand panel pasted in (or the SearchLand report). SearchLand has already given them the facts: the title, 50 or more constraint layers, the SHLAA entry, supply and delivery test, the planning history list. They can see all of that themselves in minutes. This skill's job is the layer above it, the work an experienced planning consultant does:
+The user gives a title number, the address SearchLand shows for it, and the SearchLand left-hand panel pasted in (or the SearchLand report). SearchLand has already given them the facts: the title, 50 or more constraint layers, the SHLAA entry, supply and delivery test, the planning history list. They can see all of that themselves in minutes. This skill's job is the layer above it, the work an experienced planning consultant does:
 
 1. **Judgement**: read what sits behind the facts (decision notices, officer reports, appeal decisions on the site and the titles around it) and say what they mean for this site today: which refusal reasons still stand, which have fallen away and why, and how the rest could be resolved.
 2. **Council memory**: read every earlier finding about this council (the council note and every earlier site note in the same council) and judge this site against all of it, then add what this site teaches, so each review in a council is sharper than the last.
@@ -15,7 +15,7 @@ So: never restate the SearchLand panel back to the user as if it were a finding,
 
 Read `checklist.md` (the coverage checklist), `report-template.md` (what the user receives) and `glossary.md` (plain words for every term) in this folder before starting. Read `knowledge/learned-checks.md` too.
 
-Throughout: the advisor (this conversation) decides and judges; the worker (`.claude/agents/worker.md`, Sonnet) does the reading and fetching from written briefs. Brief templates are at the end of this file. Send independent briefs at the same time so the user is not kept waiting.
+Throughout: the lead (this conversation) decides and judges; the worker (`.claude/agents/worker.md`, Sonnet) does the reading and fetching from written briefs. Brief templates are at the end of this file. Send independent briefs at the same time so the user is not kept waiting.
 
 Tell the user in one plain line what you are doing as each stage starts ("I'm reading the council's assessment of this site now."), so they can follow along.
 
@@ -30,8 +30,9 @@ Tell the user in one plain line what you are doing as each stage starts ("I'm re
 
 1. Read the site note if one exists (`knowledge/sites/<TITLE>.md`) and start from its open items; never redo work it holds. Read the council note if one exists. If not, the worker builds it in step 5 before any judgement is made, because every judgement depends on it.
    **Council memory**: from `knowledge/index.md`, list every earlier site note in the same council and read their verdicts, precedent summaries and documents findings, and the council note's behaviour profile ("Appeal and refusal patterns", "S106 patterns seen", "Learned"). Keep them in mind for every judgement below, and say in the report where an earlier site changes the reading of this one (for example "the same local gap policy was the reason <earlier title> was refused; this site sits inside the same gap").
-2. Get the starting information. The best start is SearchLand's own data for the title. If the user has given only a title number or address, ask once, plainly:
-   "To start, please open the title in SearchLand, click on the land so the panel opens down the left side, then select everything in that panel (click inside it, press Ctrl and A, then Ctrl and C) and paste it here. Or click Export report and send me the PDF. Either works."
+2. Get the starting information: the title number, the address SearchLand shows for it, and SearchLand's left-hand panel. If anything is missing, ask once, plainly:
+   "To start, please open the title in SearchLand and click on the land so the panel opens down the left side. Copy the address it shows, then select everything in that panel (click inside it, press Ctrl and A, then Ctrl and C) and paste it all here with the title number. Or click Export report and send me the PDF."
+   Ownership comes from what the user gives: the SearchLand panel says whether the owner is private or a company, and names the company. For a company, check Companies House yourself (status, directors, people with significant control, charges, filings). A private owner's name, any lender, and any option, developer notice or restriction are only on the title register, which the user buys (about £7); until then mark them "could not check". Never present an owner's identity or the absence of an option as a finding without the register.
    If the session has a browser that is signed in to SearchLand, open the title yourself (`.claude/skills/searchland/SKILL.md`) and do not ask. If neither is possible, carry on from public sources and mark the SearchLand items "could not check" until the user pastes the panel.
 3. Two screening questions before deep work, answered from the SearchLand data or the map: does the land have its own frontage to a public road (if not, who owns the strip between), and is it over about half an acre (under that it is a plot, not strategic land; say so and stop unless the user wants it anyway). A hard constraint over the whole site (functional flood plain, SSSI, ancient woodland, a live allocation already built out) can also end the review early, with the reason recorded.
 4. Decide the route the site is on, because it sets what matters most:
@@ -105,11 +106,11 @@ Fields, verbatim where the document gives them: name and address; parish; landow
 
 SearchLand's "source" link often opens the assessment at the right page; when the user has pasted that entry, use it and only fetch the document for the earlier rounds. When the source link does not work (roughly four times in ten), the worker fetches the document. Earlier rounds matter: a site assessed negative in 2016 and positive in 2020 tells you what the council changed its mind about.
 
-The advisor reads the whole entry. The sentence that decides a site is usually in a mitigation or impact column ("will change to unsuitable if adjacent sites are not brought forward"; "mitigation unfeasible for this site in isolation"; "nearby clustered sites could provide sufficient massing"). Reconcile nominated capacity, modelled capacity, net area and density with SearchLand's units figure and the title area.
+The lead reads the whole entry. The sentence that decides a site is usually in a mitigation or impact column ("will change to unsuitable if adjacent sites are not brought forward"; "mitigation unfeasible for this site in isolation"; "nearby clustered sites could provide sufficient massing"). Reconcile nominated capacity, modelled capacity, net area and density with SearchLand's units figure and the title area.
 
-## 5. Where the council stands (worker builds the council note; advisor reads it)
+## 5. Where the council stands (worker builds the council note; lead reads it)
 
-If the council note is missing or older than three months, the worker builds it (brief template B). The advisor then records for the site:
+If the council note is missing or older than three months, the worker builds it (brief template B). The lead then records for the site:
 - **The plan ladder**: call for sites (nothing judged; no planning weight) > land availability assessment (positive, neutral or negative) > draft plan, Regulation 18 (preferred sites) > submission plan, Regulation 19 (proposed allocations) > examination > adopted plan (allocations, the only stage at which the council has decided to build there). Names vary; the process does not. Where the site sits on it.
 - **SearchLand colours**: the coloured SHLAA layer is the last assessment (green positive, orange neutral, red negative); blue is the current call for sites. Green only: assessed positive and not resubmitted, often the best target. Blue only: new land someone is working on. Green and blue: still being pushed, expect competition. Red and blue: rejected and resubmitted, a long shot.
 - **Five year housing land supply** from the council's live statement (open it in the browser; cached copies can be a year old) and the **Housing Delivery Test**. Below five years, or a test result below 75 percent, the tilted balance applies: permission should be granted unless the harm significantly and demonstrably outweighs the benefits. Supply looks forward; the test looks back; a council can pass one and fail the other.
@@ -117,7 +118,7 @@ If the council note is missing or older than three months, the worker builds it 
 - **Now or wait**: a council can refuse as premature only where the scale would undermine plan making. Small sites beside a draft allocation can go in now under the tilted balance; a site that is the allocation itself waits for the plan.
 - Where a small operator can realistically get in: positive in the assessment but not allocated, with an owner or small agent behind it; allocated but stalled (the monitoring report and supply statement list every allocation's progress; "not started" is a lead); preferred sites at Regulation 18 before anyone has tied them up. Allocated sites in an adopted plan are usually already under option.
 
-## 6. What the site could carry (advisor, from the council note and policy)
+## 6. What the site could carry (lead, from the council note and policy)
 
 So the review already knows the shape of a scheme before any appraisal:
 - **Affordable housing**: the policy percentage (and any different rate by area or for rural exception sites), the size of scheme at which it starts to apply (often 10 homes or 0.5 hectares, lower in some rural areas), the tenure split (for example social rent, affordable rent, First Homes, shared ownership), and whether a commuted sum is taken on small schemes. Quote the policy number and document.
@@ -126,13 +127,13 @@ So the review already knows the shape of a scheme before any appraisal:
 - **Other policy obligations**: open space and play, biodiversity net gain (10 percent), nutrient or water neutrality, CIL rates, typical S106 items.
 - **A first scheme range**: from the net developable area after constraints, a low and high home count with the affordable number at each, stated as a range with its assumptions. The appraisal skill turns this into numbers and the best mix.
 
-## 7. Planning history of the site and its neighbours (worker, then advisor)
+## 7. Planning history of the site and its neighbours (worker, then lead)
 
 Worker (brief C): every application on the title and on every adjoining title, all decisions and dates, applicant and agent; for any refusal, withdrawal or appeal of any size on the title, and any of five or more homes next door, the decision notice, officer or committee report and appeal decision, converted to text. Search the council portal, SearchLand's planning list and Documents tab, plota.co.uk and planning.org.uk, because any one list can lag.
 
-Advisor: read every appeal decision and every refusal report on the site in full. Then test **every reason, one by one**, against today, and write the result as a short table in the report: the reason as the council or inspector worded it; **still stands**, **no longer stands** or **stands but resolvable**; and why, with evidence (the supply position then and now, the plan then and now, a designation added or dropped, neighbouring approvals since, with references). For a resolvable reason, say how (a section 106 contribution, an affordable housing offer, a survey, a design change such as fewer homes or a landscaped frontage). This test is the most valuable thing the review gives the user. Sort the reasons into (a) real planning objections (character, landscape, sustainability, heritage, flood, access), (b) fixable omissions (no affordable offer, unsigned undertaking, missing survey, no viability evidence), (c) the policy context at the time (supply position, plan in force, any designation). Then say what has changed since. Refusal reasons age differently: "countryside, no need for housing" reasons fall away when supply is short; character, gap, heritage and landscape reasons persist. A refusal on principle is no to the land; a refusal on detail is no to that drawing. An undecided application usually waits on neutrality, S106, the plan, or an applicant who stopped pushing; read the latest documents before assuming.
+Lead: read every appeal decision and every refusal report on the site in full. Then test **every reason, one by one**, against today, and write the result as a short table in the report: the reason as the council or inspector worded it; **still stands**, **no longer stands** or **stands but resolvable**; and why, with evidence (the supply position then and now, the plan then and now, a designation added or dropped, neighbouring approvals since, with references). For a resolvable reason, say how (a section 106 contribution, an affordable housing offer, a survey, a design change such as fewer homes or a landscaped frontage). This test is the most valuable thing the review gives the user. Sort the reasons into (a) real planning objections (character, landscape, sustainability, heritage, flood, access), (b) fixable omissions (no affordable offer, unsigned undertaking, missing survey, no viability evidence), (c) the policy context at the time (supply position, plan in force, any designation). Then say what has changed since. Refusal reasons age differently: "countryside, no need for housing" reasons fall away when supply is short; character, gap, heritage and landscape reasons persist. A refusal on principle is no to the land; a refusal on detail is no to that drawing. An undecided application usually waits on neutrality, S106, the plan, or an applicant who stopped pushing; read the latest documents before assuming.
 
-## 8. Precedent review: how this council actually behaves (worker, then advisor)
+## 8. Precedent review: how this council actually behaves (worker, then lead)
 
 Policy says what a council should do; decisions show what it does. This step is often the most valuable in the review.
 
@@ -140,7 +141,7 @@ Policy says what a council should do; decisions show what it does. This step is 
 
 **Worker** (brief D): search SearchLand's planning search, the council portal and planning.org.uk for recent decisions near the site, newest first, until there is one approved and one refused example that fit the scope. For each of the two, give: reference, address, distance and direction from the site, homes, type, applicant and agent, date lodged, decision and date, officer or committee, appeal reference and outcome. Then read in full the officer or committee report (and the appeal decision if there was one) and extract: the reasons, the policies cited, the weight given to housing supply, what was said about character, landscape, gaps, sustainability, access and heritage, the S106 and affordable housing secured, and density. Write to `knowledge/sites/<TITLE>-precedent.md`.
 
-**Advisor**: from the two examples (and the council note's earlier patterns), write a short behaviour profile for this kind of site. Say plainly that it rests on two examples and is a pointer, not a statistical pattern:
+**Lead**: from the two examples (and the council note's earlier patterns), write a short behaviour profile for this kind of site. Say plainly that it rests on two examples and is a pointer, not a statistical pattern:
 - What gets approved at the edge of settlements of this tier, at what size and density, and why.
 - Which refusal reasons recur, and which of them the council wins or loses at appeal.
 - How much weight officers and inspectors give the housing shortfall (tilted balance) against character and landscape.
@@ -149,7 +150,7 @@ Policy says what a council should do; decisions show what it does. This step is 
 - What each pattern means for this site: the arguments that will work, the objections to design out, and the size of scheme the council has shown it will accept.
 Copy the reusable parts of the profile (not the site specific parts) into the council note under "Appeal and refusal patterns" and "S106 patterns seen", with references and dates, so the next site in that council starts with it.
 
-## 9. Council document sweep (worker, then advisor)
+## 9. Council document sweep (worker, then lead)
 
 The local plan comes first and matters most. Most local plans never name a small site, so searching for the site's name is not enough: identify every policy and map designation that covers the site's **location** (open countryside, settlement boundaries, local gaps, landscape or character areas, conservation areas, green infrastructure, minerals) from the policies map and the plan text, read those policies in full, and find the other sites in the same area the council refused or rejected under them, because a reason that defeated a neighbour defeats this site too even when this site has no planning history. Then look for the site, its field or farm name, its road, its SHELAA references and its parish in every council and parish document where a council writes about land in passing (brief E):
 - every round of the land availability assessment and call for sites registers;
@@ -163,9 +164,9 @@ The local plan comes first and matters most. Most local plans never name a small
 - open space, playing pitch and green infrastructure studies; ecological network maps;
 - the county minerals and waste plan and safeguarding maps;
 - planning committee papers and minutes, and parish council minutes, for the last three years.
-For each mention: document, date, page, the exact words. For designations: whether the site is inside, adjoining or affected, and what the policy says. The advisor reads every mention and decides what it means.
+For each mention: document, date, page, the exact words. For designations: whether the site is inside, adjoining or affected, and what the policy says. The lead reads every mention and decides what it means.
 
-## 10. Market and intelligence: is anyone already moving (worker, then advisor)
+## 10. Market and intelligence: is anyone already moving (worker, then lead)
 
 Brief F: search for the site and its owners in:
 - property listings: Rightmove, Zoopla and OnTheMarket (land and farms for sale, and sold history near the postcode), landsale.co.uk, UK Land and Farms, the websites of local land agents and national ones (Savills, Strutt and Parker, Knight Frank, Carter Jonas, and the county's chartered surveyors);
@@ -173,9 +174,9 @@ Brief F: search for the site and its owners in:
 - news and the web: local news, parish newsletters and minutes, community groups' public pages, campaign groups opposing development, promoters' and housebuilders' "our land" or "current promotions" pages, planning consultants' case studies, and any public consultation website for a scheme on the land;
 - company filings that name the land (charges, accounts of a promoter);
 - the council's pre-application or consultation registers where public.
-Record every hit with date and link. The advisor decides what it means: already on the market (someone has set a price; an agent is involved), sold recently (a new owner with a fresh plan, or a land banker), a promoter publicly working it (do not write to the owner over their head), local opposition (a planning risk to name), or nothing at all (the quiet site that is often the best target).
+Record every hit with date and link. The lead decides what it means: already on the market (someone has set a price; an agent is involved), sold recently (a new owner with a fresh plan, or a land banker), a promoter publicly working it (do not write to the owner over their head), local opposition (a planning risk to name), or nothing at all (the quiet site that is often the best target).
 
-## 11. Closing the coverage checklist and hunting blind spots (advisor)
+## 11. Closing the coverage checklist and hunting blind spots (lead)
 
 Go through `checklist.md` and `knowledge/learned-checks.md` line by line. Every line ends in one of: **checked** (finding and source), **not relevant** (one line of reason), or **could not check** (what was tried, why it failed, and one plain sentence of what the user can do). Then ask, deliberately, what a hostile planning officer, a neighbour, a highways engineer, an ecologist and a solicitor would each raise that is not on the list; research anything new; and if it turned up something real, add a one line check to `knowledge/learned-checks.md` (category, what to look for, where), so every future site is checked for it.
 
@@ -183,7 +184,7 @@ Always name the risks the user has not raised: ransom strips and landlocked parc
 
 **A council as landowner.** When a title in the site belongs to the council, keep its two roles apart: as planning authority it wrote the policy, as landowner it decides what to sell or allow. Never state that the council refuses, blocks or holds a ransom position unless a council paper, minute or reply says so; until then it is "an open question to check", with the evidence (policy wording, the inspector's words, the title plan) set out neutrally. Check which parcel holds the road frontage and whether a neighbouring permitted site gives another route before calling access a problem. A policy that "allows a possible access road" across protected land is a limit on how, not a refusal.
 
-## 12. Verdict and approach (advisor)
+## 12. Verdict and approach (lead)
 
 One of:
 - **Approach the owner**: register clean or no live interest; a credible route (application now, allocation in the next plan, or both); the precedent supports a scheme of this kind. Next step: the letters skill.
