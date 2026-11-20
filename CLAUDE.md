@@ -73,6 +73,7 @@ Do not read `sources/` wholesale; search it for the site reference or term and q
 - A method learned (a portal quirk, a better source) goes into the relevant skill under "Learned", written without any council, place, site, title or person name (for example "some council registers only show records after you click Agree"). The council specific detail goes in that council's note in `knowledge/councils/`. This keeps the skills shareable.
 - Large documents are converted to text under `sources/<council>/` with the source address and date at the top; the PDF or Word file is then deleted.
 - Rebuild the index with `python tools/build_index.py` in the same turn.
+- If `profile/sync-problem.txt` exists at the start of a chat, the automatic update of the public copy was stopped by the leak check. Tell the user in one line, move the personal detail it names out of the method file into `profile/` or `knowledge/`, and the next reply updates the public copy again. (The automatic update is set up only where `profile/profile.json` has `public_repo_folder` and `.claude/settings.local.json` has the Stop hook running `tools/sync_public.py`; it builds, checks and commits, and never pushes.)
 - New personal words (owner names, site names) that must never be shared are added to `profile/private-terms.txt`.
 
 ## House rules
