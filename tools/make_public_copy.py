@@ -1,6 +1,7 @@
 """Build the shareable copy of the engine, with nothing personal in it.
 
 Usage: python tools/make_public_copy.py <output folder>
+(The output folder can be a GitHub clone: its .git folder is kept, everything else is replaced.)
 
 Copies CLAUDE.md, README.md, .claude/ (settings, worker, skills), tools/, and the empty
 knowledge/, sources/ and profile/ scaffolding. Leaves out profile/ contents (except the
@@ -63,9 +64,16 @@ def private_words():
 
 def main(out):
     out = os.path.abspath(out)
+    # If the output folder is a git clone (for example the GitHub copy), keep its .git
+    # folder so the clone stays connected; replace everything else.
     if os.path.exists(out):
-        shutil.rmtree(out)
-    os.makedirs(out)
+        for name in os.listdir(out):
+            if name == '.git':
+                continue
+            p = os.path.join(out, name)
+            shutil.rmtree(p) if os.path.isdir(p) and not os.path.islink(p) else os.remove(p)
+    else:
+        os.makedirs(out)
     for name in KEEP_TOP:
         src = os.path.join(ROOT, name)
         if os.path.isdir(src):
@@ -105,7 +113,11 @@ def main(out):
                     if t in titles:
                         problems.append('%s:%d contains title %s' % (os.path.relpath(p, out), i, t))
     if problems:
-        shutil.rmtree(out)
+        for name in os.listdir(out):
+            if name == '.git':
+                continue
+            p = os.path.join(out, name)
+            shutil.rmtree(p) if os.path.isdir(p) and not os.path.islink(p) else os.remove(p)
         print('NOT BUILT. Personal details found:')
         print('\n'.join(problems))
         sys.exit(1)
