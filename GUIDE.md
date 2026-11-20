@@ -1,25 +1,45 @@
 # Land Engine: a plain English guide
 
-Land Engine works alongside SearchLand as a senior adviser. It does not find sites for you: you find them in SearchLand as you do now. You give it the title number, the address and what SearchLand shows for the site, and it reads everything behind it, tells you what it means for the site today, and remembers what it learns about each council. This guide shows you what it does, sets it up with you in about fifteen minutes, and explains how to use it every day.
+For every site you give it, Land Engine does the desk review an experienced planning consultant would do before saying whether a site is worth pursuing. That is the work most of us either do by hand over several evenings, skip because there isn't time, or leave for BuildUp's experts to pick up when they review the site. With Land Engine, a site has already been looked at from every angle before you write to the owner or send it to BuildUp. This guide shows what it does, sets it up with you in about fifteen minutes, and explains how to use it every day.
 
-## Why this matters
+## What it goes through for each site
 
-SearchLand already puts the facts in front of you: the title, the constraint layers, the SHLAA entry (usually one click to the right page of the source document), the housing land supply and delivery test, and the planning history. Looking a site up takes minutes. Land Engine doesn't replace any of that. It starts from the SearchLand panel you paste in and works from there.
+You give it the title number, the address SearchLand shows, and the SearchLand panel. It then works through these layers, reading the documents themselves rather than summaries:
 
-What SearchLand can't do is tell you what it all means for this site, today. That is where Land Engine helps, in three ways.
+1. **The council's land availability assessment (SHLAA).** It finds the site in every round, not only the latest, and reads the whole entry. The sentence that decides a site often sits in a small column, for example "will change to unsuitable if adjacent sites are not brought forward". It also shows how the council's view changed from one round to the next, and why.
+2. **The planning history of the site and the land around it.** It reads the decision notices, officer reports and appeal decisions in full, then tests every refusal reason against today. Say a site was refused six years ago for six reasons. It might tell you:
+   - three of them no longer apply, because the council has since lost its five year supply and two schemes on the same edge of the village have been approved;
+   - two can be dealt with by a section 106 contribution or a survey;
+   - one still stands, and here is what a scheme would have to do about it.
+3. **How this council decides schemes like yours.** It finds two nearby examples, one approved and one refused, and reads why.
+4. **The council's plans and papers.** It reads the adopted and emerging local plan, including its policies map, any changes made since (main modifications), the housing land supply statement and the delivery test. It also reads the studies behind the plan (landscape, Green Belt, heritage, flood, viability), the neighbourhood plan, committee papers, parish council minutes and consultation responses, looking for anything about your site, its road or its area. A local plan runs to hundreds of pages and rarely names your field, but it may put the area your site sits in inside a local gap, open countryside or a landscape area. Or a site down the road may have been refused for a reason that would apply to yours, even though yours has no history of its own.
+5. **What a scheme would have to provide.** The affordable housing share and its type, the mix of homes, density, CIL, section 106, biodiversity net gain and any nutrient or water rules, so you know the shape of a scheme before any numbers are run.
+6. **The owner and the market.** If SearchLand shows a company owner, it checks the company at Companies House. When you buy the title register, it reads it for the owners, any lender, and any option or developer notice. It checks whether the land is listed for sale or being promoted by someone else.
+7. **Every way a site can fail.** It runs a checklist covering access, flood, heritage, landscape, ecology, ground conditions, services and policy. It marks each line checked, not relevant, or couldn't check, and tells you what would clear the ones it couldn't.
 
-**1. A senior adviser at your side.** It reads what sits behind the facts: the full decision notices, officer reports and appeal decisions on the site and on the titles around it. Then it weighs each refusal reason against today. Say a site was refused six years ago for six reasons. It might tell you:
-- three of them no longer apply, because the council has since lost its five year supply and two schemes on the same edge of the village have been approved;
-- two can be dealt with by a section 106 contribution or a survey;
-- one still stands, and here is what a scheme would have to do about it.
+Then it gives you a plain verdict with its reasons: write to the owner, approach the agent, park it until something changes, or drop it.
 
-That is the judgement an experienced planning consultant brings, applied to every site you look at.
+## It checks for itself, whatever you paste
 
-**2. A memory of each council that builds up.** When you look at site after site, nobody holds everything from the last ten in their head: which refusal reasons this council keeps using, which of them lose at appeal, what officers accepted on the last village edge scheme. Land Engine writes it all down as it goes. By your tenth site in a council, it reads the new site against everything learned from the first nine.
+SearchLand puts the facts in front of you quickly: the title, the constraint layers, the SHLAA entry, the land supply, the delivery test and the planning history. Land Engine starts from the panel you paste, but it never relies on it alone. It runs its own checks on the council's assessment, the planning history, the council's documents and the market every time. So if a tab wasn't expanded, a section didn't copy, or SearchLand is out of date, nothing is missed. Where what it finds differs from SearchLand, it tells you, with the source.
 
-**3. The documents nobody has time to search.** A local plan runs to hundreds of pages and rarely names your field. But it may cover the area your site sits in: open countryside, a local gap, a landscape or character area, or a place where another site was refused for a reason that would apply to yours. Land Engine searches the adopted and emerging local plan, the neighbourhood plan, the studies behind them (landscape, Green Belt, heritage, flood), committee papers and parish minutes for anything about your site, its road or its area. It also finds the site in older SHLAA rounds that SearchLand doesn't show, and fetches the SHLAA document itself when SearchLand's source link doesn't open the page.
+That matters, because SearchLand is not always right or current. In testing on real sites, it found, for example:
+- a SHLAA card that looked like the council's assessment of a whole field, but only recorded a one-house permission on a corner of the title;
+- a neighbouring allocation that the council had cut by more than half in plan changes published months earlier, while SearchLand still showed the old version;
+- the council's own viability study for the sites next door, which gave tested values and costs to build the appraisal on.
 
-In short, it is a second pair of eyes that goes deeper than the panel, explains what it finds in plain words, and remembers.
+## It remembers every site, in every council
+
+This is the part that grows in value the more you use it.
+
+When you look at a hundred sites, you can't hold everything from the first ninety-nine in your head: which refusal reasons this council keeps using, which of them lose at appeal, what officers accepted on the last village edge scheme, which documents mattered. An ordinary AI chat doesn't help much either. Each new chat starts knowing nothing. And if you keep one long chat going, it fills up, slows down, uses more of your allowance and starts losing the earlier detail.
+
+Land Engine keeps notes in your own folder instead, written as it works:
+- **a note for every site:** what it found in the SHLAA, the planning history, the council's documents, the news and online searches, the verdict, and every call and letter;
+- **a note for every council:** its plan and where it stands, its supply, the reasons it uses to refuse, what wins and loses at appeal, its section 106 and CIL figures, and where to find its documents;
+- **a note for every agent, promoter or developer you come across.**
+
+Every new site in a council is read against all of that. By your tenth site in a council, it reads the new one against everything learned from the first nine: the same local gap policy that sank an earlier site, an appeal down the road that changed the picture, a precedent you'd long forgotten. Nothing is lost in an old chat or to memory. Each site you analyse makes the next one sharper.
 
 ## What it does for you
 
@@ -27,23 +47,10 @@ You talk to it in ordinary words. One or two words is often enough.
 
 | You type | What happens | What you get back |
 |---|---|---|
-| The title number, the address SearchLand shows, and the SearchLand panel pasted in | Site review: it reads beyond the panel and weighs everything up (list below) | A detailed report, a plain verdict, and anything it couldn't check |
+| The title number, the address SearchLand shows, and the SearchLand panel pasted in | Site review: it works through every layer above | A detailed report, a plain verdict, and anything it couldn't check |
 | appraisal | It works out what the land could be worth with planning | One clear set of numbers, the best mix of homes, and your BuildUp submission ready to go |
 | letter | It writes to every owner on the title register, on your letterhead | Finished PDF letters ready to print, with a site map if you use one |
 | call script | It prepares what to say when an owner rings | A script to read from on the call, with the questions in the right order |
-
-**What the site review adds to the SearchLand panel**
-- It reads every refusal, officer report and appeal on the site and its neighbours, and says which reasons still stand today, which have fallen away, and how the rest could be resolved.
-- It finds two nearby examples of how this council decides schemes like yours: one approved and one refused, with the reasons read.
-- It searches the local plan, neighbourhood plan, evidence studies, committee papers and parish minutes for your site, its road and its area.
-- It finds every SHLAA round the site appears in, including older ones, and fetches the document when SearchLand's source link doesn't work.
-- It works out what a scheme would have to provide: the share of affordable homes and their type, the mix of homes, and density.
-- It checks whether the land is listed for sale or being promoted by someone else.
-- It checks the owner as far as it honestly can. If SearchLand shows a company, it looks the company up at Companies House (status, directors, charges). A private owner's name, any lender, and any option or developer notice are only on the title register. Once you buy the register (about £7) and give it, it reads it; until then it marks those lines "could not check".
-- It runs a checklist of every way a site can fail, from what SearchLand shows and its own online checks, and marks each one checked, not relevant, or couldn't check. Some checks need you, such as buying the register or clicking Download on a council page.
-- It compares the site with everything it has learned from your earlier sites in the same council.
-
-**It remembers.** It keeps notes on every site, council and agent in your folder. The second site in a council is quicker and sharper than the first, and nothing you've found is ever lost.
 
 When each step finishes, it offers you the next one. After a site review, for example, it asks whether you'd like the appraisal.
 
