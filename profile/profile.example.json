@@ -1,0 +1,30 @@
+{
+ "full_name": "Jane Example",
+ "short_name": "Jane Example",
+ "role": "Land Director",
+ "company": "Example Land Ltd",
+ "legal_entity": "Example Land Limited, company 00000000",
+ "mobile": "07000 000000",
+ "landline": "",
+ "email": "land@example.co.uk",
+ "website": "example.co.uk",
+ "office_address": "",
+ "return_address": "",
+ "ref_prefix": "EXL/",
+ "company_description": "a land and development company working in {county}",
+ "counties": [
+  "Example-shire"
+ ],
+ "brand_colour": "#1F4E3D",
+ "logo": "logo.png",
+ "searchland_login": "how you sign in to SearchLand",
+ "letters_folder": "C:\\Users\\you\\Documents\\Land\\Letters",
+ "registers_folder": "C:\\Users\\you\\Documents\\Land\\Title Registers",
+ "downloads_folder": "C:\\Users\\you\\Downloads",
+ "programme": "BuildUp",
+ "target_profit_on_sale": 0.26,
+ "buildup_workbook": "buildup/your-appraisal-workbook.xlsx",
+ "buildup_calculator": "buildup/your-costing-calculator.xlsx",
+ "plain_english_level": "new to planning; explain every term, keep the proper name",
+ "map_style": "separate"
+}

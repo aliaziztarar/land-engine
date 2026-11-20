@@ -1,0 +1,46 @@
+# Planning and land terms, in plain words
+
+Most users are new to the industry. Name the proper term and explain it in plain words the first time it appears in a reply, so they learn the vocabulary. Add new terms here as they come up.
+
+- **Title register**: the Land Registry record for a parcel, in three parts: property (what and where, rights over and under it), proprietorship (who owns it, restrictions on selling), charges (mortgages, notices of agreements, covenants). About £7 for the register and £7 for the plan.
+- **Red line, red edge**: the application site boundary on the location plan. Certificate B must be served on every owner inside it; anyone can apply on land they do not own, but a council will not grant without the main owner on side.
+- **Option agreement**: the owner promises to sell at a price (or a formula) if the buyer gets planning; the buyer pays for planning. A **conditional contract** achieves much the same: exchange now, completion only if permission is granted.
+- **Promotion agreement**: a promoter gets planning on the owner's land and takes a percentage of the sale price (often 10 to 25 percent) when the owner sells; the promoter never buys.
+- **Unilateral notice, agreed notice, restriction**: register entries that record someone else's interest. A notice records that an agreement exists; a restriction stops a sale without that party's consent. Neither reveals the agreement's terms or whether it is still live.
+- **Overage, uplift, clawback**: a previous seller's right to a share of the value gain when planning is granted or the land is sold, for a set number of years.
+- **Ransom strip**: a sliver of land between the site and the road (verge, retained strip, a neighbour's land) without which no entrance can be built. Its owner can ask about a third of the uplift (Stokes v Cambridge).
+- **Landlocked**: no frontage of its own to a public road.
+- **Easement**: a right over someone else's land (a cable, a pipe, a way). A utility deed usually brings covenants not to build over or near the apparatus.
+- **Tenants in common**: co-owners with separate shares; the standard restriction means both must sign a sale.
+- **Assent**: executors handing property to the heir. **Grant of probate**: the court document executors need before they can sell or option.
+- **Settlement boundary**: the line round a village or town inside which housing is acceptable in principle. Adopted (current plan) carries weight; emerging (draft) carries less.
+- **Settlement hierarchy**: the council's tiers of places (for example rural service centre, larger village, smaller village). A place not in the hierarchy is countryside in policy terms.
+- **Local plan, adopted and emerging**: the council's rule book. Allocation: a site the adopted plan has chosen for homes, with its own policy. Regulation 18: draft consultation. Regulation 19: the submitted plan. Examination: an inspector tests it.
+- **Call for sites**: the council's open invitation to put land forward. Nothing is judged; carries no planning weight.
+- **SHLAA, SHELAA, HELAA, SLAA**: the same assessment under different names (housing, housing and economic, strategic). Each site gets suitable, available, achievable verdicts and a capacity.
+- **Neighbourhood plan**: a parish's own plan, made by referendum; it sits under the local plan and can allocate small sites.
+- **Five year housing land supply**: how many years of homes the council can show are coming. Below five, the **tilted balance** (NPPF paragraph 11d) applies: permission unless harm significantly and demonstrably outweighs benefits. Forward looking.
+- **Housing Delivery Test (HDT)**: the past three years' delivery against need. Below 95 percent an action plan; below 85 percent a 20 percent buffer on supply; below 75 percent the presumption applies on its own. Backward looking.
+- **Prematurity**: refusing because a scheme would pre-empt the plan; only allowed where the scale would undermine plan making (NPPF paragraphs 49 and 50).
+- **Principle versus detail**: a refusal on principle says no to the land; a refusal on detail says no to that drawing.
+- **Local gap, important open area, strategic gap**: designations keeping villages apart; they persist even when supply is short.
+- **Green Belt** and **grey belt**: Green Belt is a strict designation; grey belt (NPPF paragraph 155, conditions a to d plus the Golden Rules) is Green Belt land that contributes little and can be released with higher affordable housing.
+- **National Landscape (AONB)**, **SSSI**, **SINC**, **SPA, SAC, Ramsar**: nature and landscape designations; the last three bring Habitats Regulations duties (for example nutrient neutrality, SAMM payments).
+- **Nutrient neutrality**: in some river catchments new homes must offset the nitrogen or phosphorus they add, usually by buying credits from a mitigation scheme and submitting a nutrient budget. A cost and a delay, not a block. **Water neutrality** (Sussex) is a different rule with a similar effect.
+- **BNG**: biodiversity net gain, 10 percent mandatory, on site or by credits, with 30 year management.
+- **Affordable housing threshold**: the scheme size at which a percentage of homes must be affordable (often 10 homes, or 0.5 ha; some plans 7 homes or 0.25 ha). Vacant building credit knocks the floor area of vacant buildings off the requirement. A **commuted sum** is a cash payment instead of on site affordable homes.
+- **Registered provider**: a housing association that buys the affordable homes at a transfer price (a fraction of open market value).
+- **S106**: a legal agreement with the council for contributions (education, health, open space, highways, monitoring). **Unilateral undertaking**: the one sided version. **CIL**: the Community Infrastructure Levy, a fixed charge per square metre set by a charging schedule; some councils have none.
+- **S278 and S38**: agreements with the highway authority for works to the public road and for adopting a new estate road.
+- **Visibility splay**: the clear sight lines needed at an access (BuildUp's figure about 43 m each way on a 30 mph road).
+- **Secure outfall**: somewhere for surface water to go (infiltration tests on chalk).
+- **Pre-application (pre-app)**: paid advice from the council before an application. Not free; not to be done on land we do not control.
+- **Outline, full, reserved matters, PiP**: outline fixes the principle and some matters; full fixes everything; reserved matters fill in an outline; permission in principle is a light route for small sites.
+- **Delegated or committee decision**: officers decide most applications; larger or contentious ones go to the planning committee, whose reports and minutes are on the council's democracy site.
+- **Desktop appraisal**: a per site review from the desk (title, history, plan, constraints, neighbours) before spending money.
+- **GDV**: gross development value, the total sale value of the finished homes. **Residual land value**: GDV less all costs and profit, what a builder can pay for the land with permission.
+- **NDSS**: the national space standard; 4b7p means four bedrooms, seven bedspaces; sizes in square metres, multiply by 10.764 for square feet.
+- **Agent of change**: newcomers must mitigate an existing business's noise.
+- **Landlord and Tenant Act 1954**: business tenants' security of tenure; a landlord can end a protected lease for redevelopment (ground f) with notice and compensation.
+- **Bona vacantia, escheat**: a dissolved company's land passes to the Crown (Government Legal Department) or, if disclaimed, to the Crown Estate; both sell.
+- **Adverse possession**: claiming land by long possession (12 years unregistered, 10 years registered with the owner able to object). Not our model.

@@ -1,0 +1,11 @@
+[
+ {
+  "ref": "EXL/AB123456",
+  "date": "16 November 2026",
+  "outpdf": "out/AB123456 - Jane Green.pdf",
+  "addr": ["Mrs Jane Green", "Orchard Cottage", "Mill Lane", "Ashcombe", "AB1 2CD"],
+  "salut": "Dear Mrs Green,",
+  "subject": "Land on the east side of Mill Lane, Ashcombe",
+  "body": ["Please excuse the direct approach.", "(the paragraphs as in examples/standard.md, with the profile details filled in)"]
+ }
+]

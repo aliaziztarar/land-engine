@@ -1,0 +1,12 @@
+# Your own details and notes stay on your computer and are never uploaded.
+profile/*
+!profile/README.md
+!profile/profile.example.json
+!profile/profile.example.md
+knowledge/**/*.md
+!knowledge/README.md
+sources/**
+!sources/README.md
+__pycache__/
+*.tmp
+.claude/settings.local.json
