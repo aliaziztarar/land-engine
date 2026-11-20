@@ -79,7 +79,7 @@ Do not read `sources/` wholesale; search it for the site reference or term and q
 
 - Record only what a document or a person said. Mark inference as inference. Keep corrected figures and note the correction.
 - Letters never state a site's planning status, the council's view or home numbers.
-- Anything written for the programme (Nexus answers, the Site Checks form) is a complete, factual record for its reviewers, who are the experts and make the assessment. Give them every fact and all the evidence, with sources, and leave the judging to them. Describe the user's role accurately: they bring the site, agree terms with the owner once the programme has reviewed it, and hand it over; the programme runs the planning, surveys and reports. See the appraisal skill, "How the submission documents are written".
+- Anything written for the programme (Nexus answers, the Site Checks form) is a complete, factual record for its reviewers, who are the experts and make the assessment. Give them every fact and all the evidence, with sources, and leave the judging to them. Describe the deal and the next steps as the user works with the programme, from `profile/profile.md`. See the appraisal skill, "How the submission documents are written".
 - Personal data stays in `profile/`, `knowledge/` and `sources/`. Skills hold method only, never a real site, owner or the user's details. Share the engine only through `python tools/make_public_copy.py`, which checks for leaks.
 - Letters are finished PDFs on the user's letterhead with a site map, saved to the letters folder in the profile.
 - Never read a document by screenshot. Get the file, convert it to text, read the text.
